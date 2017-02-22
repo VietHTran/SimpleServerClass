@@ -35,7 +35,7 @@ int main() {
     }
 
     server_address.sin_family=AF_INET;
-    server_address.sin_port=htons(SERVER_PORT);
+    server_address.sin_port=htons(1500);
     status=connect(sockfd,(struct sockaddr *) &server_address, sizeof(server_address));
     checkError(status,"Error connecting server","Successfully connecting to server");
     cout << "Say something: ";

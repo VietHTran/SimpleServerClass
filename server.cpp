@@ -13,14 +13,14 @@
 
 using namespace std;
 
-Server::Server() {
+Server::Server(int port_num) {
     isConnect=false;
     listener=socket(AF_INET,SOCK_STREAM,0); 
     checkError(listener,"Error initializing socket!", "Socket initialized");
 
     server_address.sin_family=AF_INET; 
     server_address.sin_addr.s_addr=htons(INADDR_ANY); 
-    server_address.sin_port=htons(SERVER_PORT);
+    server_address.sin_port=htons(port_num);
 
     int status=bind(listener,(struct sockaddr *) &server_address, sizeof(server_address)); 
     checkError(status,"Error assigning protocol address to socket","Successfully assigning protocol to socket");

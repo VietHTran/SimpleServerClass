@@ -1,6 +1,6 @@
 #include <string>
 
-#define SERVER_PORT     1500//9877
+//#define SERVER_PORT     1500//9877
 #define MAX_QUEUE       1
 #define MAX_LINE        4096
 #define BUFF_SIZE       1024

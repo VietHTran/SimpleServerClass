@@ -9,7 +9,7 @@ using namespace std;
 
 class Server {
 public:
-    Server();
+    Server(int port_num);
     void                    waitForClient(); //wait until client connect to proceed
     void                    closeConnection(); //close connection 
     void                    sendToClient(char * buffer); //send message to client with setup buffer
@@ -21,6 +21,7 @@ private:
     int                     listener;
     int                     connection;
     int                     status;
+    int                     port;
     pid_t                   child_id; 
     socklen_t               client_len;
     struct sockaddr_in      client_address; 

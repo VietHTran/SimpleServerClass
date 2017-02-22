@@ -24,7 +24,7 @@ void getMessage(int socketfd, void* buffer) {
 void sendMessageCLI(int socketfd) {
     char buffer[BUFF_SIZE];
     cin.getline(buffer, BUFF_SIZE);
-    send(socketfd,buffer,BUFF_SIZE,0);
+    send(socketfd,buffer,5,0);
 }
 
 void sendMessage(int socketfd, char* message) {
