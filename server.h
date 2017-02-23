@@ -14,6 +14,7 @@ public:
     void                    closeConnection(); //close connection 
     void                    sendToClient(char * buffer); //send message to client with setup buffer
     void                    sendToClientCLI(); //send message to client with text input from command line
+    void                    sendToClientStr(string message); //send message with string
     void                    getClientMessage(char *buff); //receive message sent from client and store in buff
 private:
     bool                    isConnect; //Only accept one client

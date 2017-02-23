@@ -49,7 +49,7 @@ void Server::closeConnection() {
 }
 
 void Server::sendToClient(char * buffer) {
-    sendMessage(connection,buffer);
+    sendMessage(connection,buffer,sizeof(buffer)/sizeof(buffer[0]));
 }
 
 void Server::sendToClientCLI() {
@@ -58,4 +58,9 @@ void Server::sendToClientCLI() {
 
 void Server::getClientMessage(char *buff) {
     getMessage(connection,buff);
+}
+
+void Server::sendToClientStr(string message) {
+    char* messgChr=(char *) message.c_str();
+    sendMessage(connection,messgChr,message.length());
 }

@@ -13,10 +13,11 @@ int main() {
     Server server(1500);
     server.waitForClient();
     cout << "Waiting for client\'s message..." << endl;
-    server.getClientMessage(buff);
-    cout <<"Client: "<<buff << endl;
-    cout <<"Say something back: ";
-    server.sendToClientCLI();
+    for (int i=0;i<2;i++) {
+        server.getClientMessage(buff);
+        cout <<"Client: "<<buff << endl;
+        server.sendToClientStr("Got it");
+    }
     cout << "Closing connection..." << endl;
     server.closeConnection();
 }

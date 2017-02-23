@@ -38,11 +38,13 @@ int main() {
     server_address.sin_port=htons(1500);
     status=connect(sockfd,(struct sockaddr *) &server_address, sizeof(server_address));
     checkError(status,"Error connecting server","Successfully connecting to server");
-    cout << "Say something: ";
-    sendMessageCLI(sockfd);
-    cout << "Waiting for server\'s response..." << endl;
-    getMessage(sockfd,buffer);
-    cout <<"Server: "<<buffer<<endl;
+    for (int i=0;i<2;i++) {
+        cout << "Say something: ";
+        sendMessageCLI(sockfd);
+        cout << "Waiting for server\'s response..." << endl;
+        getMessage(sockfd,buffer);
+        cout <<"Server: "<<buffer<<endl;
+    }
     cout << "Closing connection..." << endl;
     close(sockfd);
     exit(0);

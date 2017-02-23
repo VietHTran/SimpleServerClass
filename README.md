@@ -12,13 +12,11 @@ The SimpleServerClass provides a simple way to establish TCP server connection t
 3. If the project is compiled using Cmake or Makefile, remember to include server.cpp and common.cpp with other cpp files and link to the headers directory.
 
 ## Install examples
-1. Create a folder name "sample" in the cloned or downloaded repository.
-2. Open the terminal and locate it to the repository.
-3. Run command `bash Install.sh` to install the client and server programs.
+1. Open the terminal and locate it to the repository.
+2. Run command `bash Install.sh` to install the client and server programs.
 
 ## Run examples
-1. Open 2 terminals and locate both of them to the "sample" folder created earlier.
-2. Enter command `./server` on one of the terminal.
-3. Enter command `./client` on the other terminal.
-4. Enter a message in the client terminal and press "enter/return" to send it to the server.
-5. Enter a response in the server terminal and press "enter/return" to send the message back to the client.
+1. Open the terminal and locate it to the "sample" folder in the repository
+2. Run command "./Run.sh" to run the client program and create another terminal that runs the server program
+3. Type a message into the client and program and then press "Enter/return" to send it to server.
+4. Repeat 3.
