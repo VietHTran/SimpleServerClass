@@ -10,6 +10,7 @@ using namespace std;
 class Server {
 public:
     Server(int port_num);
+    ~Server();
     void                    waitForClient(); //wait until client connect to proceed
     void                    closeConnection(); //close connection 
     void                    sendToClient(char * buffer); //send message to client with setup buffer

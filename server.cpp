@@ -64,3 +64,7 @@ void Server::sendToClientStr(string message) {
     char* messgChr=(char *) message.c_str();
     sendMessage(connection,messgChr,message.length());
 }
+
+Server::~Server() {
+    close(connection);
+}
